@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hot Honey Nicky's Creole Tenders</title>
+  <style>
+    :root {
+      --red: #c4161c;
+      --yellow: #f4c430;
+      --green: #1f4d2b;
+      --dark: #1a1a1a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: var(--dark);
+    }
+
+    header {
+      background: var(--red);
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--yellow);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--dark);
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+
+    .btn:hover { background: #ffd966; }
+
+    h2 {
+      color: var(--green);
+      margin-bottom: 1.5rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-item {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .menu-item h3 { margin-top: 0; }
+
+    .price {
+      color: var(--red);
+      font-weight: bold;
+    }
+
+    .location-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: var(--green);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .location-box { grid-template-columns: 1fr; }
+      header { flex-direction: column; }
+      nav { margin-top: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <!-- Replace src with your uploaded logo image -->
+    <img src="IMG_20260116_162614_01.png" alt="Hot Honey Nicky's Logo" />
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#location">Location</a>
+    <a href="#order">Order</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Hot Honey Nicky's</h1>
+  <p>Bold Creole flavor. Crispy tenders. Drizzled with hot honey.</p>
+  <a class="btn" href="#order">Order Now</a>
+</section>
+
+<section id="menu">
+  <h2>Menu</h2>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <h3>Creole Chicken Tenders</h3>
+      <p>Hand-breaded, seasoned, and fried golden.</p>
+      <p class="price">$9.99</p>
+    </div>
+    <div class="menu-item">
+      <h3>Hot Honey Tenders</h3>
+      <p>Signature tenders finished with spicy honey drizzle.</p>
+      <p class="price">$11.49</p>
+    </div>
+    <div class="menu-item">
+      <h3>Creole Fries</h3>
+      <p>Crispy fries tossed in our house Creole seasoning.</p>
+      <p class="price">$3.99</p>
+    </div>
+    <div class="menu-item">
+      <h3>Honey Butter Biscuit</h3>
+      <p>Fluffy biscuit with whipped honey butter.</p>
+      <p class="price">$2.49</p>
+    </div>
+  </div>
+</section>
+
+<section id="location">
+  <h2>Location</h2>
+  <div class="location-box">
+    <div>
+      <p><strong>Hot Honey Nicky's Creole Tenders</strong></p>
+      <p>123 Bayou Street<br/>New Orleans, LA</p>
+      <p><strong>Hours</strong><br/>Mon–Sun: 11am – 10pm</p>
+    </div>
+    <iframe src="https://www.google.com/maps?q=New+Orleans,+LA&output=embed"></iframe>
+  </div>
+</section>
+
+<section id="order">
+  <h2>Order Online</h2>
+  <p>Fast pickup. Fresh food. Hot honey every time.</p>
+  <a class="btn" href="#">Start Your Order</a>
+</section>
+
+<footer>
+  <p>© 2026 Hot Honey Nicky's Creole Tenders</p>
+</footer>
+
+</body>
+</html>
