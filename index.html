@@ -9,64 +9,119 @@
       --red: #c4161c;
       --yellow: #f4c430;
       --green: #1f4d2b;
+      --dark: #121212;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      height: 100vh;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, var(--red), #9f1014);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f0f0f;
       color: #fff;
-      text-align: center;
     }
 
-    .logo-container {
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HERO */
+    .hero {
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
+      padding: 4rem 2rem 3rem;
+      background: radial-gradient(circle at top, #2a2a2a, #0f0f0f);
+      text-align: center;
     }
 
-    .logo-container img {
+    .hero img {
       max-width: 90vw;
-      max-height: 60vh;
+      max-height: 55vh;
     }
 
     .opening {
       margin-top: 1.5rem;
-      font-size: 2rem;
-      font-weight: bold;
-      letter-spacing: 0.1em;
+      font-size: 1.8rem;
+      letter-spacing: 0.15em;
+      font-weight: 700;
       color: var(--yellow);
       text-transform: uppercase;
     }
 
+    .tagline {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      max-width: 600px;
+      line-height: 1.6;
+      color: #e5e5e5;
+    }
+
+    /* INFO SECTION */
+    .info {
+      background: #151515;
+      padding: 3rem 2rem;
+    }
+
+    .info-grid {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .location h2 {
+      margin-top: 0;
+      color: var(--yellow);
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .location p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    iframe {
+      width: 100%;
+      height: 260px;
+      border: none;
+      border-radius: 12px;
+      filter: grayscale(100%) contrast(1.1);
+    }
+
+    /* FOOTER */
     footer {
-      padding: 1.5rem;
+      padding: 1.5rem 2rem 2rem;
+      text-align: center;
+      background: #0b0b0b;
     }
 
     footer a {
       color: #fff;
       text-decoration: none;
-      font-weight: bold;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+      font-weight: 600;
+      border-bottom: 2px solid var(--yellow);
+      padding-bottom: 2px;
     }
 
     footer a:hover {
-      text-decoration: underline;
+      color: var(--yellow);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
       .opening {
         font-size: 1.4rem;
       }
@@ -75,17 +130,42 @@
 </head>
 <body>
 
-  <div class="logo-container">
-    <!-- Place the logo file next to this HTML file -->
-    <img src="NickysHotHoneyCreoleTenders.png" alt="Hot Honey Nicky's Creole Tenders Logo" />
-    <div class="opening">Opening Soon...</div>
-  </div>
+  <div class="page">
 
-  <footer>
-    <a href="https://www.facebook.com/p/Hot-Honey-Nickys-Creole-Tenders-61584624287517/" target="_blank" rel="noopener">
-      Follow us on Facebook
-    </a>
-  </footer>
+    <!-- HERO -->
+    <section class="hero">
+      <img src="IMG_20260116_162614_01.png" alt="Hot Honey Nicky's Creole Tenders Logo" />
+      <div class="opening">Opening Soon</div>
+      <div class="tagline">
+        Creole style chicken tenders, drizzled with our signature hot honey.
+      </div>
+    </section>
+
+    <!-- LOCATION / INFO -->
+    <section class="info">
+      <div class="info-grid">
+        <div class="location">
+          <h2>Location</h2>
+          <p>27490</p>
+          <p>Lacombe, LA</p>
+          <p>United States, Louisiana</p>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps?q=27490%20Lacombe%20LA&output=embed"
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <a href="https://www.facebook.com/p/Hot-Honey-Nickys-Creole-Tenders-61584624287517/" target="_blank" rel="noopener">
+        Follow us on Facebook
+      </a>
+    </footer>
+
+  </div>
 
 </body>
 </html>
