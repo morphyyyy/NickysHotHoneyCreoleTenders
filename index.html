@@ -42,9 +42,31 @@
     .hero img {
       max-width: 90vw;
       max-height: 55vh;
+      opacity: 0;
+      transform: scale(0.85) translateY(20px);
+      animation: logoEnter 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    @keyframes logoEnter {
+      0% {
+        opacity: 0;
+        transform: scale(0.85) translateY(30px);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-4px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
     }
 
     .opening {
+      opacity: 0;
+      animation: fadeUp 1s ease-out forwards;
+      animation-delay: 1.2s;
+
       margin-top: 1.5rem;
       font-size: 1.8rem;
       letter-spacing: 0.15em;
@@ -54,6 +76,10 @@
     }
 
     .tagline {
+      opacity: 0;
+      animation: fadeUp 1s ease-out forwards;
+      animation-delay: 1.5s;
+
       margin-top: 1rem;
       font-size: 1.1rem;
       max-width: 600px;
@@ -100,6 +126,10 @@
 
     /* FOOTER */
     footer {
+      opacity: 0;
+      animation: fadeUp 1s ease-out forwards;
+      animation-delay: 1.8s;
+
       padding: 1.5rem 2rem 2rem;
       text-align: center;
       background: #0b0b0b;
@@ -115,6 +145,17 @@
 
     footer a:hover {
       color: var(--yellow);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 800px) {
@@ -146,13 +187,12 @@
       <div class="info-grid">
         <div class="location">
           <h2>Location</h2>
-          <p>27490</p>
-          <p>Lacombe, LA</p>
-          <p>United States, Louisiana</p>
+          <p>27409 US-190</p>
+          <p>Lacombe, LA 70445</p>
         </div>
 
         <iframe
-          src="https://www.google.com/maps?q=27490%20Lacombe%20LA&output=embed"
+          src="https://www.google.com/maps?q=27409%20US-190%20Lacombe%20LA%2070445"
           loading="lazy">
         </iframe>
       </div>
